@@ -1,0 +1,8 @@
+const router = require("express").Router();
+const auth = require("../middlewares/auth");
+
+const { getSummary } = require("../controllers/dashboardController");
+
+router.get("/summary", auth, getSummary);
+
+module.exports = router;
